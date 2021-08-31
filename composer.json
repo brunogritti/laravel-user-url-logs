@@ -13,13 +13,13 @@
 
     "autoload": {
         "psr-4": {
-            "Brunogritti\\VueMakeCommand\\": "src"
+            "Brunogritti\\CreateVueCommand\\": "src"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Brunogritti\\VueMakeCommand\\VueGeneratorServiceProvider"
+                "brunogritti\\CreateVueCommand\\VueGeneratorServiceProvider"
             ]
         }
     }

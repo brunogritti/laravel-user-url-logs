@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Ui;
+namespace Brunogritti\CreateVueCommand;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
