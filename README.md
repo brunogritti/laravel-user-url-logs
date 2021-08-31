@@ -1,0 +1,1 @@
+Generate your vue components via terminal

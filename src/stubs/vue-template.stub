@@ -1,0 +1,19 @@
+<template>
+    <div>
+        <!-- Your {Component} component's template -->
+    </div>
+</template>
+
+<script>
+    export default {
+        data() {
+            return {
+                //
+            };
+        }
+    }
+</script>
+
+<style>
+
+</style>
