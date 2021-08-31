@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Console\Commands;
+namespace Brunogritti\CreateVueCommand;
 
 use Illuminate\Console\GeneratorCommand;
 
