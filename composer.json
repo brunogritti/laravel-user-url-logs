@@ -1,7 +1,7 @@
 {
     "name": "brunogritti/laravel-create-vue-command",
     "description": "Creates a laravel command that generates a vue file inside laravel resources",
-    "type": "laravel command",
+    "type": "laravel-command",
     "license": "MIT",
     "authors": [
         {
