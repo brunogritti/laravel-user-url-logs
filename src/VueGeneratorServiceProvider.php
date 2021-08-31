@@ -28,6 +28,6 @@ class VueGeneratorServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Route::mixin(new AuthRouteMethods);
+        //
     }
 }
