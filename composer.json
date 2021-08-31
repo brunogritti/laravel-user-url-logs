@@ -19,7 +19,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "brunogritti\\CreateVueCommand\\VueGeneratorServiceProvider"
+                "Brunogritti\\CreateVueCommand\\VueGeneratorServiceProvider"
             ]
         }
     }
