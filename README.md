@@ -4,9 +4,9 @@ Generate your vue components via terminal
 
 ### Instalation
 
-Require this package in your composer.json and update composer. This will download the package and the dompdf + fontlib libraries also.
+Require this package in your composer.json and update composer. 
 
-    composer require barryvdh/laravel-dompdf
+    composer require brunogritti/laravel-create-vue-command 
 
   
 ## Using
