@@ -41,7 +41,7 @@ class VueMakeCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return __DIR__ . '/../stubs/vue-template.stub';
+        return __DIR__ . 'stubs/vue-template.stub';
     }
 
     /**

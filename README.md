@@ -11,7 +11,7 @@ Require this package in your composer.json and update composer.
   
 ## Using
 
-Use `php artisan make:vue-component` to create a vue component inside resources/assets/js/components
+Use `php artisan make:vue-component ExampleComponent` to create a vue component inside resources/assets/js/components
     
 ### License
 
