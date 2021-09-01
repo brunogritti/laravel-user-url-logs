@@ -15,10 +15,10 @@ Use `php artisan make:vue-component ExampleComponent` to create a vue component 
 
 ## Roadmap
 
-- [x] Ask for custom path
-- [ ] Make custom path into parameter 
-- [ ] Separate versions
-- [ ] Make config for custom path
+* Make custom path into parameter 
+* Separate versions
+* Make package auto-updated
+* Make config for custom path
 
 ## License
 
