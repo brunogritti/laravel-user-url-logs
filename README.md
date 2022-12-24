@@ -11,14 +11,11 @@ Require this package in your composer.json and update composer.
 
 # Using
 
-Use `php artisan make:vue-component ExampleComponent` to create a vue component inside resources/assets/js/components
+Use `php artisan make:activity-logs ExampleComponent` to create a vue component inside resources/assets/js/components
 
 ## Roadmap
 
-* Make custom path into parameter 
-* Separate versions
-* Make package auto-updated
-* Make config for custom path
+* Make parameter to set user foreign key optional
 
 ## License
 
