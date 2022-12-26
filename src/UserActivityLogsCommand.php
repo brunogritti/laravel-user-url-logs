@@ -3,7 +3,6 @@
 namespace Brunogritti\UserActivityLogs;
 
 use Illuminate\Console\Command;
-use Brunogritti\UserActivityLogs\Migrations\CreateUserActivityLogsTable;
 
 class UserActivityLogsCommand extends Command
 {
@@ -38,7 +37,7 @@ class UserActivityLogsCommand extends Command
     public function handle()
     {
         try {
-            CreateUserActivityLogsTable::run();
+            \Migrations\CreateUserActivityLogsTable::run();
 
             $this->info('UserActivityLogs table created successfully.');
 
