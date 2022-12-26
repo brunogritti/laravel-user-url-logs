@@ -28,21 +28,31 @@ trait Loggable
     
                     $log->save();
                 }
-                //self::createLog($model, 'updated', $change, $model[$change]);
+                //self::saveLog($model, 'updated', $change, $model[$change]);
             }
         });
 
         static::created(function (Model $model) {
-            $log = new UserActivityLog;
-
-            $log->user_id = \Auth::id();
-            $log->action = 'created';
-            $log->model = get_class($model);
-            $log->row = $model->id;
-            $log->created_at = now();
-
-            $log->save();
-            //self::createLog($model, 'created');
+            //Get which columns changed
+            $changes = array_keys($model->getDirty());
+            
+            //Creates a log for every column changed
+            foreach ($changes as $key => $change) {
+                if ($model[$change] != null) {
+                    $log = new UserActivityLog;
+    
+                    $log->user_id = \Auth::id();
+                    $log->action = 'created';
+                    $log->model = get_class($model);
+                    $log->column = $change;
+                    $log->row = $model->id;
+                    $log->data = $model[$change];
+                    $log->created_at = now();
+    
+                    $log->save();
+                }
+                //self::saveLog($model, 'created', $change, $model[$change]);
+            }
         });
 
         static::deleted(function (Model $model) {
@@ -55,11 +65,11 @@ trait Loggable
             $log->created_at = now();
 
             $log->save();
-            //self::createLog($model, 'deleted');
+            //self::saveLog($model, 'deleted');
         });
     }
 
-    private function createLog($model, $action, $column, $data)
+    private function saveLog($model, $action, $column, $data)
     {
         $log = new UserActivityLog;
 

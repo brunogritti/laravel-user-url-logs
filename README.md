@@ -17,7 +17,8 @@ Apply `use Logabble` to the models you want to keep track of
 
 ## Roadmap
 
-* Make parameter to set user foreign key as optional
+* Save each column when created
+* Separate model saving in another function
 
 ## License
 
