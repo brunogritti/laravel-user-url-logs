@@ -9,23 +9,22 @@ trait Loggable
 {
     public static function bootLoggable()
     {
-        $trait = $this;
         static::updated(function (Model $model) use ($trait) {
             //Get which columns changed
             $changes = array_diff($model->getOriginal(), $model->getAttributes());
 
             //Creates a log for every column changed
             foreach ($changes as $key => $change) {
-                parent::createLog($model, 'updated', $change, $model[$change]);
+                self::createLog($model, 'updated', $change, $model[$change]);
             }
         });
 
         static::created(function (Model $model) use ($trait) {
-            parent::createLog($model, 'created');
+            self::createLog($model, 'created');
         });
 
         static::deleted(function (Model $model) use ($trait) {
-            parent::createLog($model, 'deleted');
+            self::createLog($model, 'deleted');
         });
     }
 
@@ -39,5 +38,7 @@ trait Loggable
         $log->column = $column;
         $log->row = $model->id;
         $log->data = $data;
+
+        $log->save();
     }
 }
