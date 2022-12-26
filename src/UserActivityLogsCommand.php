@@ -2,9 +2,9 @@
 
 namespace Brunogritti\UserActivityLogs;
 
-use Illuminate\Console\GeneratorCommand;
+use Illuminate\Console\Command;
 
-class UserActivityLogsCommand extends GeneratorCommand
+class UserActivityLogsCommand extends Command
 {
     /**
      * The console command name.
