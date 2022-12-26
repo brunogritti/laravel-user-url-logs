@@ -9,7 +9,7 @@ trait Loggable
 {
     public static function bootLoggable()
     {
-        static::updated(function (Model $model) use ($trait) {
+        static::updated(function (Model $model) {
             //Get which columns changed
             $changes = array_diff($model->getOriginal(), $model->getAttributes());
 
@@ -19,11 +19,11 @@ trait Loggable
             }
         });
 
-        static::created(function (Model $model) use ($trait) {
+        static::created(function (Model $model) {
             self::createLog($model, 'created');
         });
 
-        static::deleted(function (Model $model) use ($trait) {
+        static::deleted(function (Model $model) {
             self::createLog($model, 'deleted');
         });
     }
