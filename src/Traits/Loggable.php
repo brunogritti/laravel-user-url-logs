@@ -13,8 +13,10 @@ trait Loggable
             //Get which columns changed
             $changes = array_diff($model->getOriginal(), $model->getAttributes());
 
+            error_log($changes);
             //Creates a log for every column changed
             foreach ($changes as $key => $change) {
+                error_log($model[$change]);
                 $log = new UserActivityLog;
 
                 $log->user_id = \Auth::id();
@@ -23,6 +25,7 @@ trait Loggable
                 $log->column = $change;
                 $log->row = $model->id;
                 $log->data = $model[$change];
+                $log->created_at = now();
 
                 $log->save();
                 //self::createLog($model, 'updated', $change, $model[$change]);
@@ -36,6 +39,7 @@ trait Loggable
             $log->action = 'created';
             $log->model = get_class($model);
             $log->row = $model->id;
+            $log->created_at = now();
 
             $log->save();
             //self::createLog($model, 'created');
@@ -48,6 +52,7 @@ trait Loggable
             $log->action = 'deleted';
             $log->model = get_class($model);
             $log->row = $model->id;
+            $log->created_at = now();
 
             $log->save();
             //self::createLog($model, 'deleted');
@@ -64,6 +69,7 @@ trait Loggable
         $log->column = $column;
         $log->row = $model->id;
         $log->data = $data;
+        $log->created_at = now();
 
         $log->save();
     }
