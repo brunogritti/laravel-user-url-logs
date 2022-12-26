@@ -13,7 +13,8 @@
 
     "autoload": {
         "psr-4": {
-            "Brunogritti\\UserActivityLogs\\": "src"
+            "Brunogritti\\UserActivityLogs\\": "src",
+            "Brunogritti\\UserActivityLogs\\Migrations\\": "src/migrations"
         }
     },
     "extra": {
