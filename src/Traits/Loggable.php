@@ -16,16 +16,16 @@ trait Loggable
 
             //Creates a log for every column changed
             foreach ($changes as $key => $change) {
-                $trait->createLog($model, 'updated', $change, $model[$change]);
+                parent::createLog($model, 'updated', $change, $model[$change]);
             }
         });
 
         static::created(function (Model $model) use ($trait) {
-            $trait->createLog($model, 'created');
+            parent::createLog($model, 'created');
         });
 
         static::deleted(function (Model $model) use ($trait) {
-            $trait->createLog($model, 'deleted');
+            parent::createLog($model, 'deleted');
         });
     }
 
