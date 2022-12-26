@@ -13,8 +13,8 @@ trait Loggable
             //Get which columns changed
             $changes = array_diff($model->getOriginal(), $model->getAttributes());
 
-            error_log(implode($model->getOriginal()));
-            error_log(implode($model->getAttributes()));
+            dd($model->getDirty());
+            
             //Creates a log for every column changed
             foreach ($changes as $key => $change) {
                 dd($change, $model[$change]);
