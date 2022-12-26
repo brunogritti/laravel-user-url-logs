@@ -36,7 +36,7 @@ class UserActivityLogsCommand extends Command
 
     public function handle()
     {
-        try {
+        /* try {
             \Brunogritti\UserActivityLogs\Migrations\CreateUserActivityLogsTable::run();
 
             $this->info('UserActivityLogs table created successfully.');
@@ -45,6 +45,6 @@ class UserActivityLogsCommand extends Command
             $this->info('<fg=red>Whops! We could not create UserActivityLogs table.');
 
             $this->info($th->getMessage());
-        }
+        } */
     }
 }
