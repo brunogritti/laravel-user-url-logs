@@ -7,7 +7,7 @@ use Brunogritti\UserActivityLogs\Models\UserActivityLog;
 
 trait Loggable
 {
-    public static function bootObservable()
+    public static function bootLoggable()
     {
         static::updated(function (Model $model) {
             dd('entrou', $model);
