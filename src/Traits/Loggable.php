@@ -9,22 +9,23 @@ trait Loggable
 {
     public static function bootLoggable()
     {
-        static::updated(function (Model $model) {
+        $trait = $this;
+        static::updated(function (Model $model) use ($trait) {
             //Get which columns changed
             $changes = array_diff($model->getOriginal(), $model->getAttributes());
 
             //Creates a log for every column changed
             foreach ($changes as $key => $change) {
-                $this->createLog($model, 'updated', $change, $model[$change]);
+                $trait->createLog($model, 'updated', $change, $model[$change]);
             }
         });
 
-        static::created(function (Model $model) {
-            $this->createLog($model, 'created');
+        static::created(function (Model $model) use ($trait) {
+            $trait->createLog($model, 'created');
         });
 
-        static::deleted(function (Model $model) {
-            $this->createLog($model, 'deleted');
+        static::deleted(function (Model $model) use ($trait) {
+            $trait->createLog($model, 'deleted');
         });
     }
 
