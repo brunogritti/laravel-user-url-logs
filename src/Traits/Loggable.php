@@ -11,7 +11,7 @@ trait Loggable
     {
         static::updated(function (Model $model) {
             //Get which columns changed
-            $changes = array_diff($user->getOriginal(), $user->getAttributes());
+            $changes = array_diff($model->getOriginal(), $model->getAttributes());
 
             //Creates a log for every column changed
             foreach ($changes as $key => $change) {
