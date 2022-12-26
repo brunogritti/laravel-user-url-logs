@@ -13,10 +13,10 @@ trait Loggable
             //Get which columns changed
             $changes = array_diff($model->getOriginal(), $model->getAttributes());
 
-            error_log($changes);
+            error_log(implode(',', $changes));
             //Creates a log for every column changed
             foreach ($changes as $key => $change) {
-                error_log($model[$change]);
+                dd($change, $model[$change]);
                 $log = new UserActivityLog;
 
                 $log->user_id = \Auth::id();
