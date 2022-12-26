@@ -15,16 +15,42 @@ trait Loggable
 
             //Creates a log for every column changed
             foreach ($changes as $key => $change) {
-                self::createLog($model, 'updated', $change, $model[$change]);
+                $log = new UserActivityLog;
+
+                $log->user_id = \Auth::id();
+                $log->action = 'updated';
+                $log->model = get_class($model);
+                $log->column = $change;
+                $log->row = $model->id;
+                $log->data = $model[$change];
+
+                $log->save();
+                //self::createLog($model, 'updated', $change, $model[$change]);
             }
         });
 
         static::created(function (Model $model) {
-            self::createLog($model, 'created');
+            $log = new UserActivityLog;
+
+            $log->user_id = \Auth::id();
+            $log->action = 'created';
+            $log->model = get_class($model);
+            $log->row = $model->id;
+
+            $log->save();
+            //self::createLog($model, 'created');
         });
 
         static::deleted(function (Model $model) {
-            self::createLog($model, 'deleted');
+            $log = new UserActivityLog;
+
+            $log->user_id = \Auth::id();
+            $log->action = 'deleted';
+            $log->model = get_class($model);
+            $log->row = $model->id;
+
+            $log->save();
+            //self::createLog($model, 'deleted');
         });
     }
 
