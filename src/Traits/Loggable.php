@@ -10,6 +10,7 @@ trait Loggable
     public static function bootObservable()
     {
         static::updated(function (Model $model) {
+            dd('entrou', $model);
             //Get which columns changed
             $changes = array_diff($user->getOriginal(), $user->getAttributes());
 
@@ -20,10 +21,12 @@ trait Loggable
         });
 
         static::created(function (Model $model) {
+            dd('entrou', $model);
             $this->createLog($model, 'created');
         });
 
         static::deleted(function (Model $model) {
+            dd('entrou', $model);
             $this->createLog($model, 'deleted');
         });
     }
