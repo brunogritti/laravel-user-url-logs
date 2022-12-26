@@ -1,11 +1,11 @@
 <?php
 
-namespace Brunogritti\CreateVueCommand;
+namespace Brunogritti\UserActivityLogs;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
-class VueGeneratorServiceProvider extends ServiceProvider
+class UserActivityLogsServiceProvider extends ServiceProvider
 {
     /**
      * Register the package services.
@@ -16,7 +16,7 @@ class VueGeneratorServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->commands([
-                VueMakeCommand::class
+                UserActivityLogsCommand::class
             ]);
         }
     }

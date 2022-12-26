@@ -1,12 +1,12 @@
 <?php
 
-namespace Clubecasa\Models;
+namespace Brunogritti\UserActivityLogs\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ActivityLog extends Model
+class UserActivityLog extends Model
 {
-    protected $table = 'activity_logs';
+    protected $table = 'user_activity_logs';
 
     protected $guard = ['id'];
 
