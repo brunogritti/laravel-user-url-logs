@@ -39,10 +39,12 @@ class UserActivityLogsCommand extends Command
         try {
             Brunogritti\UserActivityLogs\Migrations\CreateUserActivityLogsTable::run();
 
-        } catch (\Throwable $th) {
-            $this->info('Whops! We could not create UserActivityLogs table.');
-        }
+            $this->info('UserActivityLogs table created successfully.');
 
-        $this->info('UserActivityLogs table created successfully.');
+        } catch (\Throwable $th) {
+            $this->info('<fg=red>Whops! We could not create UserActivityLogs table.');
+
+            $this->info($th->getMessage());
+        }
     }
 }
