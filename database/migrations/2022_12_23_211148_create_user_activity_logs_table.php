@@ -15,7 +15,7 @@ class CreateUserActivityLogsTable extends Migration
     {
         Schema::create('user_activity_logs', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained('users')->nullable();
+            $table->string('user_id')->nullable();
             $table->enum('action', ['created', 'updated', 'deleted'])->default('created');
             $table->string('model');
             $table->string('column')->nullable();
