@@ -15,7 +15,7 @@ trait Loggable
             
             //Creates a log for every column changed
             foreach ($changes as $key => $change) {
-                if ($model[$change] != null) {
+                if ($model[$change] !== null) {
                     $log = new UserActivityLog;
     
                     $log->user_id = \Auth::id();
