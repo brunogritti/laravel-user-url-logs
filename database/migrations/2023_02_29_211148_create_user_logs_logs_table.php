@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUserActivityLogsTable extends Migration
+class CreateUserUrlLogsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateUserActivityLogsTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_activity_logs', function (Blueprint $table) {
+        Schema::create('user_url_logs', function (Blueprint $table) {
             $table->id();
             $table->string('user_id')->nullable();
             $table->enum('action', ['created', 'updated', 'deleted'])->default('created');
@@ -32,6 +32,6 @@ class CreateUserActivityLogsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_activity_logs');
+        Schema::dropIfExists('user_url_logs');
     }
 }

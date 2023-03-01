@@ -1,24 +1,24 @@
 <?php
 
-namespace Brunogritti\UserActivityLogs;
+namespace Brunogritti\UserUrlLogs;
 
 use Illuminate\Console\Command;
 
-class UserActivityLogsCommand extends Command
+class UserUrlLogsCommand extends Command
 {
     /**
      * The console command name.
      *
      * @var string
      */
-    protected $name = 'make:user-activity-logs';
+    protected $name = 'make:user-url-logs';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Create a new laravel Migration for user activity logs';
+    protected $description = 'Create a new laravel Migration for user url logs';
 
     /**
      * The type of class being generated.
@@ -37,12 +37,12 @@ class UserActivityLogsCommand extends Command
     public function handle()
     {
         /* try {
-            \Brunogritti\UserActivityLogs\Migrations\CreateUserActivityLogsTable::run();
+            \Brunogritti\UserUrlLogs\Migrations\CreateUserUrlLogsTable::run();
 
-            $this->info('UserActivityLogs table created successfully.');
+            $this->info('UserUrlLogs table created successfully.');
 
         } catch (\Throwable $th) {
-            $this->info('<fg=red>Whops! We could not create UserActivityLogs table.');
+            $this->info('<fg=red>Whops! We could not create UserUrlLogs table.');
 
             $this->info($th->getMessage());
         } */

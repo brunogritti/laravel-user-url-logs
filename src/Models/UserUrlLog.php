@@ -1,22 +1,19 @@
 <?php
 
-namespace Brunogritti\UserActivityLogs\Models;
+namespace Brunogritti\UserUrlLogs\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class UserActivityLog extends Model
+class UserUrlLog extends Model
 {
-    protected $table = 'user_activity_logs';
+    protected $table = 'user_url_logs';
 
     protected $guard = ['id'];
 
     protected $fillable = [
         'user_id',
-        'action',
-        'model',
-        'column',
-        'row',
-        'data',
+        'url',
+        'method',
     ];
 
     public $timestamps = false;

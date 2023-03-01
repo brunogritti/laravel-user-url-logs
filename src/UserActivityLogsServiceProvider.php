@@ -1,11 +1,11 @@
 <?php
 
-namespace Brunogritti\UserActivityLogs;
+namespace Brunogritti\UserUrlLogs;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
-class UserActivityLogsServiceProvider extends ServiceProvider
+class UserUrlLogsServiceProvider extends ServiceProvider
 {
     /**
      * Register the package services.
@@ -16,7 +16,7 @@ class UserActivityLogsServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->commands([
-                UserActivityLogsCommand::class
+                UserUrlLogsCommand::class
             ]);
         }
     }

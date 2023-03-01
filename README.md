@@ -1,19 +1,19 @@
 ## User Activity Logging for Laravel
 
-Log user activity automatically with this Trait
+Log URLs that user access automatically with this Trait
 
 # Instaling
 
 Require this package in your composer.json and update composer. 
 
-    `composer require brunogritti/laravel-user-activity-logs` 
+    `composer require brunogritti/laravel-user-url-logs` 
 
 
 # Using
 
-Use `php artisan make:user-activity-logs` to run migration
+Use `php artisan make:user-url-logs` to run migration
 
-Apply `use Logabble` to the models you want to keep track of
+Apply `use LogURLs` to the models you want to keep track of
 
 ## Roadmap
 
