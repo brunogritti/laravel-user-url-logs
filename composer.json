@@ -1,6 +1,6 @@
 {
     "name": "brunogritti/laravel-user-url-logs",
-    "description": "Creates a laravel table, model and trait that logs all urls that loddeg user accesses",
+    "description": "Creates a laravel table, model and middleware that logs all urls that user accesses",
     "type": "laravel-command",
     "license": "MIT",
     "authors": [

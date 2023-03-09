@@ -1,6 +1,6 @@
-## User Activity Logging for Laravel
+## User URL Logging for Laravel
 
-Log URLs that user access automatically with this Trait
+Log URLs that user access automatically with this Middleware
 
 # Instaling
 
@@ -11,7 +11,7 @@ Require this package in your composer.json and update composer.
 
 # Using
 
-Use `php artisan make:user-url-logs` to run migration
+After requiring the package run `php artisan migrate` to run migration
 
 Apply 'log-url' middleware to the routes you want to keep track of
 
