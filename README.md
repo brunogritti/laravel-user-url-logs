@@ -6,18 +6,16 @@ Log URLs that user access automatically with this Middleware
 
 Require this package in your composer.json and update composer. 
 
-    `composer require brunogritti/laravel-user-url-logs` 
+```
+composer require brunogritti/laravel-user-url-logs
+```
 
 
 # Using
 
 After requiring the package run `php artisan migrate` to run migration
 
-Apply 'log-url' middleware to the routes you want to keep track of
-
-## Roadmap
-
-* Add response http status
+Apply 'log-user-url' middleware to the routes you want to keep track of
 
 ## License
 
