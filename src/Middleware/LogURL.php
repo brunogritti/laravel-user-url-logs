@@ -1,6 +1,6 @@
 <?php
 
-namespace Clubecasa\Http\Middleware;
+namespace Brunogritti\UserUrlLogs\Middleware;
 
 use Closure;
 

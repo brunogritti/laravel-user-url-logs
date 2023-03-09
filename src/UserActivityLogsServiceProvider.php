@@ -14,6 +14,7 @@ class UserUrlLogsServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        app('router')->aliasMiddleware('log-user-url', \Brunogritti\UserUrlLogs\Middleware\LogURL::class);
         if ($this->app->runningInConsole()) {
             $this->commands([
                 UserUrlLogsCommand::class
