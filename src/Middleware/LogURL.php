@@ -17,7 +17,7 @@ class LogURL
         //$response = $next($request);
 
         if(auth()->user()) {
-            Brunogritti\UserUrlLogs\Models\UserUrlLog::create([
+            \Brunogritti\UserUrlLogs\Models\UserUrlLog::create([
                 'user_id' => auth()->id(),
                 'url' => request()->fullUrl(),
                 'method' => request()->getMethod(),
