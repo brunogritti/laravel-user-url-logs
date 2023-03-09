@@ -13,12 +13,11 @@ Require this package in your composer.json and update composer.
 
 Use `php artisan make:user-url-logs` to run migration
 
-Apply `use LogURLs` to the models you want to keep track of
+Apply 'log-url' middleware to the routes you want to keep track of
 
 ## Roadmap
 
-* Save each column when created
-* Separate model saving in another function
+* Add response http status
 
 ## License
 

@@ -12,8 +12,9 @@ class UserUrlLog extends Model
 
     protected $fillable = [
         'user_id',
-        'url',
         'method',
+        'url',
+        'status_code',
     ];
 
     public $timestamps = false;

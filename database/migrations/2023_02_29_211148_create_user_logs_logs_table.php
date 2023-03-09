@@ -16,11 +16,9 @@ class CreateUserUrlLogsTable extends Migration
         Schema::create('user_url_logs', function (Blueprint $table) {
             $table->id();
             $table->string('user_id')->nullable();
-            $table->enum('action', ['created', 'updated', 'deleted'])->default('created');
-            $table->string('model');
-            $table->string('column')->nullable();
-            $table->string('row');
-            $table->string('data')->nullable();
+            $table->string('method');
+            $table->string('url');
+            $table->string('status_code');
             $table->timestamp('created_at');
         });
     }
