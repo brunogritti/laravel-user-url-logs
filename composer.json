@@ -1,7 +1,7 @@
 {
     "name": "brunogritti/laravel-user-url-logs",
     "description": "Creates a laravel table, model and middleware that logs all urls that user accesses",
-    "type": "laravel-command",
+    "type": "laravel-middleware",
     "license": "MIT",
     "authors": [
         {
