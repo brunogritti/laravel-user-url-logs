@@ -22,6 +22,9 @@
             "providers": [
                 "Brunogritti\\UserUrlLogs\\UserUrlLogsServiceProvider"
             ]
+        },
+        "branch-alias": {
+            "dev-master": "1.2.0-dev"
         }
     }
 }
