@@ -22,4 +22,13 @@ class UserUrlLog extends Model
     protected $dates = [
         'created_at'
     ];
+
+    public static function boot()
+    {
+        parent::boot();
+
+        static::creating(function ($model) {
+            $model->created_at = $model->freshTimestamp();
+        });
+    }
 }
