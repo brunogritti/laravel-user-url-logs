@@ -15,6 +15,7 @@ class UserUrlLog extends Model
         'method',
         'url',
         'status_code',
+        'content',
     ];
 
     public $timestamps = false;
