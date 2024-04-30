@@ -22,6 +22,7 @@ class LogURL
                 'url' => request()->fullUrl(),
                 'method' => request()->getMethod(),
                 'status_code' => $response->getStatusCode(),
+                'content' => $response->content()
             ]);
         }
 
