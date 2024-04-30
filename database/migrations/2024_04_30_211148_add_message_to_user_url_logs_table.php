@@ -14,7 +14,7 @@ class AddMessageToUserUrlLogsTable extends Migration
     public function up()
     {
         Schema::table('user_url_logs', function (Blueprint $table) {
-            $table->text('content')->after('status_code');
+            $table->text('content')->nullable()->after('status_code');
         });
     }
 
